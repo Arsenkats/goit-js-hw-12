@@ -31,16 +31,34 @@ export function marcupImage(images) {
         `;
     })
     .join('');
-  refs.imgGallery.innerHTML = marcup;
+  refs.imgGallery.insertAdjacentHTML('beforeend', marcup);
   lightbox.refresh();
 }
 export function showLoader() {
   refs.loader.classList.remove('hidden');
 }
-
 export function hideLoader() {
   refs.loader.classList.add('hidden');
 }
-export function formReset() {
-  refs.formSearch.reset();
+export function showLoadMore() {
+  refs.loadMoreBtn.classList.remove('hidden');
+}
+export function hideLoadMore() {
+  refs.loadMoreBtn.classList.add('hidden');
+}
+
+
+export function checkEndPages(currentPage, maxPage) {
+  if (currentPage >= maxPage) {
+    hideLoadMore();
+
+    if (maxPage) {
+      iziToast.info({
+        title: 'The end!',
+        message: "We're sorry, but you've reached the end of search results.",
+      });
+    }
+  } else {
+    showLoadMore();
+  }
 }
