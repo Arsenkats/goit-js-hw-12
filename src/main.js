@@ -43,6 +43,7 @@ function skipOldElement(x = 0, y = 0) {
 
 refs.formSearch.addEventListener('submit', async e => {
   e.preventDefault();
+  console.log('Form submit handler triggered');
   refs.imgGallery.innerHTML = '';
   inputValue = e.target.elements.search.value.trim();
   currentPage = 1;
@@ -85,6 +86,7 @@ refs.formSearch.addEventListener('submit', async e => {
     marcupImage(data.hits);
     lightbox.refresh();
     hideLoader();
+    console.log('Calling showLoadMore()');
     showLoadMore();
   } catch (error) {
     iziToast.error({
