@@ -18,7 +18,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "axios": "^1.7.3",
+    "axios": "^0.27.2",
     "flatpickr": "^4.6.13",
     "izitoast": "^1.4.0",
     "rollup": "^4.20.0",

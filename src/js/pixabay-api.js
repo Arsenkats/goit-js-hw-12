@@ -31,5 +31,6 @@ export async function getImage(image, page, per_page) {
           displayMode: 'once',
     });
     throw error;
+    
   }
 }
