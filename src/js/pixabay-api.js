@@ -1,4 +1,4 @@
-'use strict'
+
 import axios from "axios";
 
 export async function getImage(image, page, per_page) {
@@ -23,12 +23,12 @@ export async function getImage(image, page, per_page) {
     return res.data;
   } catch (error) {
     iziToast.error({
-          title: 'Error',
-          message:
-            `${error}`,
-          layout: 2,
-          position: 'topRight',
-          displayMode: 'once',
+      title: 'Error',
+      message:
+        `${error}`,
+      layout: 2,
+      position: 'topRight',
+      displayMode: 'once',
     });
     throw error;
   }
